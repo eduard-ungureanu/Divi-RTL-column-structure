@@ -1,0 +1,279 @@
+@media (max-width: 980px) {
+	.rtl:not(.et-fb){
+		.et_pb_row {
+			flex-direction: row-reverse;
+
+			&:not([class$="col"]) {
+				display: flex;
+				flex-direction: column-reverse;
+			}
+			.et_pb_column {
+				&:last-child {
+					margin-bottom: 30px;
+				}
+				&:first-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	} 
+}
+@media (max-width: 980px) and (min-width: 480px) {
+	.rtl:not(.et-fb) {
+		.et_pb_row {
+			&.et_pb_row_4col {
+				.et_pb_column {
+					&:first-child {
+						order: 3;
+					}
+					&:nth-child(2) {
+						order: 4;
+						margin-bottom: 0;
+					}
+					&:nth-child(3) {
+						order: 1;
+						margin-bottom: 30px;
+					}
+					&:last-child {
+						order: 2;
+					}
+				}
+			}
+			&.et_pb_row_5col,
+			&.et_pb_row_1-4_1-4_1-2,
+			&.et_pb_row_1-2_1-4_1-4,
+			&.et_pb_row_1-5_1-5_3-5,
+			&.et_pb_row_3-5_1-5_1-5,
+			&.et_pb_row_1-6_1-6_1-6_1-2,
+			&.et_pb_row_1-2_1-6_1-6_1-6 {
+				display: grid;
+				grid-column-gap: 5.5%;
+				.et_pb_column {
+					width: 100%;
+					float: none;
+					margin-right: 0;
+					&::after {
+						display: none;
+					}
+				}
+			}
+
+			&.et_pb_row_5col,
+			&.et_pb_row_1-4_1-4_1-2,
+			&.et_pb_row_1-2_1-4_1-4,
+			&.et_pb_row_1-5_1-5_3-5,
+			&.et_pb_row_3-5_1-5_1-5 {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			&.et_pb_row_1-6_1-6_1-6_1-2,
+			&.et_pb_row_1-2_1-6_1-6_1-6 {
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+
+			&.et_pb_row_5col {
+				.et_pb_column {
+					&:first-child {
+						order: 5;
+					}
+					&:nth-child(2) {
+						order: 4;
+					}
+					&:nth-child(3) {
+						order: 3;
+					}
+					&:nth-child(4) {
+						order: 2;
+					}
+					&:last-child {
+						order: 1;
+					}
+				}
+			}
+			&.et_pb_row_6col {
+				.et_pb_column{
+					&:first-child {
+						order: 4;
+					}
+					&:nth-child(2) {
+						order: 5;
+					}
+					&:nth-child(3) {
+						order: 6;
+					}
+					&:nth-child(4) {
+						order: 1;
+						margin-right: 0;
+					}
+					&:nth-child(5) {
+						order: 2;
+						margin-right: 0;
+						margin-left: 5.5%;
+					}
+					&:last-child {
+						order: 3;
+						margin-left: 5.5%;
+					}
+				}
+			}
+			&.et_pb_row_1-4_1-4_1-2 {
+				.et_pb_column {
+					&:last-child {
+						order: 1;
+					}
+					&:nth-child(2) {
+						order: 2;
+					}
+					&:first-child {
+						order: 3;
+						grid-column: span 2;
+					}
+				}
+			}
+			&.et_pb_row_1-2_1-4_1-4 {
+				.et_pb_column {
+					&:last-child {
+						order: 1;
+						grid-column: span 2;
+					}
+					&:nth-child(2) {
+						order: 2;
+					}
+					&:first-child {
+						order: 3;
+					}
+				}
+			}
+			&.et_pb_row_1-5_1-5_3-5 {
+				.et_pb_column {
+					&:last-child {
+						order: 1;
+					}
+					&:nth-child(2) {
+						order: 2;
+					}
+					&:first-child {
+						order: 3;
+						grid-column: span 2;
+					}
+				}
+			}
+			&.et_pb_row_3-5_1-5_1-5 {
+				.et_pb_column {
+					&:last-child {
+						order: 1;
+						grid-column: span 2;
+					}
+					&:nth-child(2) {
+						order: 2;
+					}
+					&:first-child {
+						order: 3;
+					}
+				}
+			}
+			&.et_pb_row_1-6_1-6_1-6_1-2 {
+				.et_pb_column {
+					&:first-child {
+						order: 4;
+						grid-column: span 3;
+					}
+					&:nth-child(2) {
+						order: 3;
+					}
+					&:nth-child(3) {
+						order: 2;
+					}
+					&:last-child {
+						order: 1;
+					}
+				}
+			}
+			&.et_pb_row_1-2_1-6_1-6_1-6 {
+				.et_pb_column {
+					&:first-child {
+						order: 4;
+					}
+					&:nth-child(2) {
+						order: 3;
+					}
+					&:nth-child(3) {
+						order: 2;
+					}
+					&:last-child {
+						order: 1;
+						grid-column: span 3;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 479px) {
+	.rtl:not(.et-fb) {
+		.et_pb_row {
+			&.et_pb_row_4col,
+			&.et_pb_row_5col,
+			&.et_pb_row_6col {
+				display: grid;
+			}
+			&.et_pb_row_4col {
+				.et_pb_column {
+					&:first-child {
+						order: 4;
+					}
+					&:nth-child(2) {
+						order: 3;
+					}
+					&:nth-child(3) {
+						order: 2;
+					}
+					&:last-child {
+						order: 1;
+					}
+				}
+			}
+			&.et_pb_row_5col {
+				.et_pb_column {
+					&:first-child {
+						order: 5;
+					}
+					&:nth-child(2) {
+						order: 4;
+					}
+					&:nth-child(3) {
+						order: 3;
+					}
+					&:nth-child(4) {
+						order: 2;
+					}
+					&:last-child {
+						order: 1;
+					}
+				}
+			}
+			&.et_pb_row_6col {
+				.et_pb_column {
+					:first-child {
+						order: 6;
+					}
+					:nth-child(2) {
+						order: 5;
+					}
+					:nth-child(3) {
+						order: 4;
+					}
+					:nth-child(4) {
+						order: 3;
+					}
+					:nth-child(5) {
+						order: 2;
+					}
+					:last-child {
+						order: 1;
+					}
+				}
+			}
+		}
+	}
+}
