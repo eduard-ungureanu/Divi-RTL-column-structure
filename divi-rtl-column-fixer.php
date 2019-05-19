@@ -9,10 +9,11 @@
 **/
 
 
-function dt_load_rtl_styles(){
-	wp_enqueue_style( 'dt-rtl-columns-fix', '/css/dt-rtl.css' );
+
+function enqueue_my_styles(){
+    if ( is_rtl() ) {
+        wp_enqueue_style('dt-rtl-columns-fix', plugin_dir_url( __FILE__ ) . 'css/dt-rtl.css' );
+    }
 }
 
-if (is_rtl()){
-	add_action( 'get_footer', 'dt_load_rtl_styles' );
-}
+add_action('get_footer','enqueue_my_styles', 9999);
