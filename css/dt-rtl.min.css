@@ -12,6 +12,9 @@
   .rtl:not(.et-fb) .et_pb_row .et_pb_column:first-child, .rtl.et-fb .et_pb_row .et_pb_column:first-child {
     margin-bottom: 0;
   }
+  .rtl:not(.et-fb) .et_section_specialty .et_pb_row:not([class$="col"]), .rtl.et-fb .et_section_specialty .et_pb_row:not([class$="col"]) {
+    flex-direction: column;
+  }
   .rtl.et-fb .et_pb_row .et_pb_column.et-last-child {
     margin-bottom: 30px !important;
   }

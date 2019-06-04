@@ -18,6 +18,13 @@
 					}
 				}
 			}
+			.et_section_specialty {
+				.et_pb_row {
+					&:not([class$="col"]) {
+						flex-direction: column;
+					}
+				}
+			}
 		}
 		&.et-fb {
 			.et_pb_row {

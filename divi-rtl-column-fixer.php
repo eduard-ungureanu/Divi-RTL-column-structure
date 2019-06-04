@@ -12,7 +12,7 @@
 
 function enqueue_my_styles(){
     if ( is_rtl() ) {
-        wp_enqueue_style('dt-rtl-columns-fix', plugin_dir_url( __FILE__ ) . 'css/dt-rtl.css' );
+        wp_enqueue_style('dt-rtl-columns-fix', plugin_dir_url( __FILE__ ) . 'css/dt-rtl.min.css' );
     }
 }
 
